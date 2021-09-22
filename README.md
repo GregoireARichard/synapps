@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# About the project
+
+Synapps is giving you playlists according to your mood
