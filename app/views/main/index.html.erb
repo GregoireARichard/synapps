@@ -3,6 +3,8 @@
 
 </div>
 <div class="align-items-center justify-content-center">
-    <h2>Get your daily music shot</h2>  
-    <p>How does it work ?</p>
+    <% if @user %>
+        <h2><%= "Hello " + @user.nickname + " 😳" %></h2>
+        <% end %> 
+    
 </div>
