@@ -12,17 +12,22 @@
         <li class="nav-item">
         <%= link_to "About", about_path, class:"nav-link" %>
         </li>
-        <% if !@user %>
+      </ul>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+         <% if Current.user %>
+          <li class="nav-item nav-link">
+          <%= "Hello " + Current.user.nickname + " 😳"%>
+        </li>
+          <li class="nav-item ">
+          <%= button_to 'logout', logout_path, method: :delete , class: "btn btn-outline-secondary" %>
+        </li>
+         
+         <% else %>
         <li class="nav-item">
           <%= link_to "Sign up", sign_up_path, class:"nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Sign in", sign_in_path, class:"nav-link" %>
-        </li>
-         <% end %>
-         <% if @user %>
-          <li class="nav-item ">
-          <%= button_to 'logout', logout_path, method: :delete , class: "nav-link" %>
         </li>
          <% end %>
       </ul>

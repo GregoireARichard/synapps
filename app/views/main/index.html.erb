@@ -3,8 +3,16 @@
 
 </div>
 <div class="align-items-center justify-content-center">
-    <% if @user %>
-        <h2><%= "Hello " + @user.nickname + " 😳" %></h2>
-        <% end %> 
+    
     
 </div>
+<script>
+    function select(x){
+        return document.querySelector(x)
+    }
+    function alertShut(){
+        const alert1 = select('.alert-info').style.display = 'none'
+        const alert2 = select('.alert-warning').style.display = 'none'
+    }
+    alertShut()
+</script>

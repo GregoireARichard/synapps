@@ -6,6 +6,9 @@
         if user.present? && user.authenticate(params[:password]) 
             session[:user_id] = user.id
             redirect_to root_path, notice: 'Logged in successfully'
+        else
+            flash[:alert] = "Invalid email adress of password"
+            render :new
         end
     end 
     def destroy
