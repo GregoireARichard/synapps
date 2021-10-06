@@ -1,18 +1,91 @@
-<div class="d-flex align-items-center justify-content-center">
-    <h1>Synapps</h1>
-
-</div>
-<div class="align-items-center justify-content-center">
-    
-    
-</div>
+<div class="main-container">
+    <div class="text-center main-handler">
+        <h1 class= "main-title-home">Synapps</h1>
+        <div class="motto-container">
+            <p class="motto" style="margin-bottom: -10px;">A mood?</p>
+            <p class="motto">A Playlist.</p>
+        </div>
+        <div class="exp-container">
+            <div class="exp-button">
+                <a href="#" class="exp-link">Start the experience.</a>
+            </div>
+        </div> 
+    <div>
+      <div class="curved-lines">
+          <div class="first-pack">
+              <canvas class="line-1"></canvas>
+              <canvas class="line-2"></canvas>
+              <canvas class="line-3"></canvas>
+          </div>
+          <div class=curved2>
+            <div class="second-pack">
+                <canvas class="line-4"></canvas>
+                <canvas class="line-5"></canvas>
+                <canvas class="line-6"></canvas>
+            </div>
+         </div>
+         <div class=curved3>
+            <div class="third-pack">
+                <canvas class="line-7"></canvas>
+                <canvas class="line-8"></canvas>
+                <canvas class="line-9"></canvas>
+            </div>
+         </div>
+          <div class=curved4>
+            <div class="fourth-pack">
+                <canvas class="line-10"></canvas>
+                <canvas class="line-11"></canvas>
+                <canvas class="line-12"></canvas>
+            </div>
+         </div>
+      <div>
+      <div class="snow-effect"></div>
+</div>           
 <script>
-    function select(x){
-        return document.querySelector(x)
+function select(x){
+    return document.querySelector(x)
+}
+function makeLines(el, num, fact){
+    let cnvs = el
+    let ctx = cnvs.getContext('2d');
+    ctx.beginPath();
+    for (let i = 0; i < cnvs.width; i++){
+        ctx.lineTo(i, cnvs.height/2-Math.sin(i*(Math.PI/num))*fact)
     }
-    function alertShut(){
-        const alert1 = select('.alert-info').style.display = 'none'
-        const alert2 = select('.alert-warning').style.display = 'none'
+    ctx.strokeStyle = '#18354C'
+    var grd = ctx.createLinearGradient(0, 0, 170, 0)
+    grd.addColorStop(0, "#18354C")
+    grd.addColorStop(1, "#0D162A")
+
+    ctx.fillStyle = grd
+    ctx.fill
+    ctx.stroke()
+}
+for(let i = 1; i <= 12; i++){// generates the lines variable
+    window["line" + i] = document.querySelector(`.line-${i}`)
+}
+lineArray1 = [line1,line2,line3]
+lineArray2 = [line4,line5,line6]
+lineArray3 = [line7,line8,line9]
+lineArray4 = [line10,line11,line12]
+
+for(let j = 1; j <= 4; j++){
+    for(let i = 0; i < window["lineArray" + j].length; i++){
+        makeLines(window["lineArray" + j][i], 100, 30)
     }
-    alertShut()
+}
+/*for( let i = 0; i < lineArray1.length; i++){ 
+    makeLines(lineArray1[i], 100, 30)
+}
+for( let i = 0; i < lineArray2.length; i++){ 
+    makeLines(lineArray2[i], 100, 30)
+}
+for( let i = 0; i < lineArray3.length; i++){ 
+    makeLines(lineArray3[i], 100, 30)
+}
+for( let i = 0; i < lineArray4.length-1; i++){ 
+    makeLines(lineArray4[i], 100, 30)
+}*/
+//makeLines(line12,110, 30)
+
 </script>

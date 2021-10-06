@@ -11,9 +11,7 @@
   </head>
 
   <body>
-    <%= render partial: "shared/navbar"%>
-    <div class="container" style="height:90vh;">
-      <%= render partial: "shared/flash"%>
+    <div class="container">
       <%= yield %>
     </div>
     <%= render partial: "shared/footer"%>
