@@ -7,7 +7,7 @@
         </div>
         <div class="exp-container">
             <div class="exp-button">
-                <a href="#" class="exp-link">Start the experience.</a>
+                <%= link_to "Start the experience.", moods_path, class: "exp-button" %> 
             </div>
         </div> 
     <div>
@@ -47,12 +47,12 @@ function select(x){
 }
 function makeLines(el, num, fact){
     let cnvs = el
-    let ctx = cnvs.getContext('2d');
+    let ctx = cnvs.getContext("2d");
     ctx.beginPath();
     for (let i = 0; i < cnvs.width; i++){
         ctx.lineTo(i, cnvs.height/2-Math.sin(i*(Math.PI/num))*fact)
     }
-    ctx.strokeStyle = '#18354C'
+    ctx.strokeStyle = "#18354C"
     var grd = ctx.createLinearGradient(0, 0, 170, 0)
     grd.addColorStop(0, "#18354C")
     grd.addColorStop(1, "#0D162A")
@@ -74,18 +74,5 @@ for(let j = 1; j <= 4; j++){
         makeLines(window["lineArray" + j][i], 100, 30)
     }
 }
-/*for( let i = 0; i < lineArray1.length; i++){ 
-    makeLines(lineArray1[i], 100, 30)
-}
-for( let i = 0; i < lineArray2.length; i++){ 
-    makeLines(lineArray2[i], 100, 30)
-}
-for( let i = 0; i < lineArray3.length; i++){ 
-    makeLines(lineArray3[i], 100, 30)
-}
-for( let i = 0; i < lineArray4.length-1; i++){ 
-    makeLines(lineArray4[i], 100, 30)
-}*/
-//makeLines(line12,110, 30)
 
 </script>

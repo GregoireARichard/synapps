@@ -6,7 +6,7 @@
     <div class="col-sm text-center">
       <% if Current.user %>
            <%= "Hello " + Current.user.nickname %>
-           <!--<%= link_to 'logout', logout_path, method: :delete %>-->
+           <%= link_to 'logout', logout_path, method: :delete %>
       <% else %> 
           <%= link_to "Sign up", sign_up_path %> / 
           <%= link_to "Log in", sign_in_path %>    
