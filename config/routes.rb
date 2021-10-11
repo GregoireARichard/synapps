@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   root to: "main#index"
   
   get "moods", to: "moods#index"
+  get "lust", to: "moods#lust"
+  get "love", to: "moods#love"
+  get "chill", to: "moods#chill"
+  get "party", to: "moods#party"
 
   get "passwords", to: "passwords#edit", as: :edit_password
   patch "passwords", to: "passwords#update" 
