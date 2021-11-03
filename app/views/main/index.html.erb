@@ -1,6 +1,6 @@
-<div class="main-container">
+<div class="main-container-index">
     <div class="text-center main-handler">
-        <h1 class= "main-title-home">Synapps</h1>
+        <h1 class= "main-title-home">Mooods</h1>
         <div class="motto-container">
             <p class="motto" style="margin-bottom: -10px;">A mood?</p>
             <p class="motto">A Playlist.</p>
@@ -40,7 +40,14 @@
          </div>
       <div>
       <div class="snow-effect"></div>
-</div>           
+</div> 
+<style>
+@media (max-width:600px){
+    .main-container-index{
+        display:none;
+    }
+}
+</style>          
 <script>
 function select(x){
     return document.querySelector(x)

@@ -47,18 +47,9 @@ h1{
     color:var(--main-font-color);
     font-size: 65px;
     text-shadow: 0px 0px 7px var(--main-font-color);
-    
 }
 .motto-container{
-    
-    transform:translate(6vw,-4.5vh);
     color: var(--white);
-}
-.main-handler{
-    margin-top:150px;
-}
-.exp-container{
-    margin-top: 150px;
 }
 a{
     text-decoration: none;
@@ -68,64 +59,80 @@ a{
 a:hover{
     color: var(--white);
 }
-.exp-button{
-    background: linear-gradient(127deg,var(--main-color), var(--second-color));
-    font-size: 18px;
-    width:17vw;
-    height:4vh;
-    margin: 0 auto;
-    border-radius: 5px;
+@media (min-width: 1400px){
+    .motto-container{
+        transform:translate(6vw,-4.5vh);
+    }
+    .main-handler{
+        margin-top:150px;
+    }
+    .exp-container{
+        margin-top: 150px;
+    }
+    .exp-button{
+        background: linear-gradient(127deg,var(--main-color), var(--second-color));
+        font-size: 18px;
+        width:17vw;
+        height:4vh;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+    .snow-effect{
+        background: url(img/stars.png);
+        height: 40vh;
+        width:30vw;
+        transform: rotate(4deg);
+        transform:translate(40vw,-150vh); 
+        z-index:0;   
+    }
+    .curved-lines{
+        height:50vh;
+        width:30vw;
+        transform:translate(-10vw,-30vw);
+        z-index:99;
+    }
+    .first-pack{
+        transform: translate(-5vw, -10vh);
+        transform: rotate(140deg);
+        width:30vw;
+    }
+    .curved2{
+        height:50vh;
+        width:30vw;
+        transform:translate(45vw,-17vh);
+    }
+    .curved3{
+        height:50vh;
+        width:30vw;
+        transform:translate(-8vw,10vh);
+    }
+    .curved4{
+        height:50vh;
+        width:30vw;
+        transform:translate(90vw,-60vh);
+    }
+    .second-pack{
+        transform: rotate(210deg);
+    }
+    .third-pack{
+        transform: rotate(140deg);
+    }
+    .fourth-pack{
+        transform: rotate(-140deg);
+    }
+    canvas[class^="line-"]{
+        margin-bottom: -130px;
+        
+    }
+    .footer-linear{
+        background: linear-gradient(127deg,var(--main-color), var(--second-color));
+        min-width:100vw;
+        height:10vh;
+        transform:translateY(7vh);
+    }
 }
-.snow-effect{
-    background: url(img/stars.png);
-    height: 40vh;
-    width:30vw;
-    transform: rotate(4deg);
-    transform:translate(40vw,-150vh); 
-    z-index:0;   
-}
-.curved-lines{
-    height:50vh;
-    width:30vw;
-    transform:translate(-10vw,-30vw);
-    z-index:99;
-}
-.first-pack{
-    transform: translate(-5vw, -10vh);
-    transform: rotate(140deg);
-    width:30vw;
-}
-.curved2{
-    height:50vh;
-    width:30vw;
-    transform:translate(45vw,-17vh);
-}
-.curved3{
-    height:50vh;
-    width:30vw;
-    transform:translate(-8vw,10vh);
-}
-.curved4{
-    height:50vh;
-    width:30vw;
-    transform:translate(90vw,-60vh);
-}
-.second-pack{
-    transform: rotate(210deg);
-}
-.third-pack{
-    transform: rotate(140deg);
-}
-.fourth-pack{
-    transform: rotate(-140deg);
-}
-canvas[class^="line-"]{
-    margin-bottom: -130px;
-    
-}
-.footer-linear{
-    background: linear-gradient(127deg,var(--main-color), var(--second-color));
-    min-width:100vw;
-    height:10vh;
-    transform:translateY(7vh);
+@media (max-width:1400px){
+    canvas{
+        display:none;
+    }
 }

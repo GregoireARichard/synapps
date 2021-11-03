@@ -14,3 +14,4 @@ class MoodsController < ApplicationController
     def chill
     end
 end
+#playlist model : spotify_link : string, youtube_link (!null) : string, deezer_link : string, genre : string,  mood : string (!null) 
